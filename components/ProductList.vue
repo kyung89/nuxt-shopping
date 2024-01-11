@@ -24,7 +24,9 @@ export default {
   },
   created() {
     // const response = await axios.get("http://localhost:3000/products");
-    const { data, error } = useFetch("http://localhost:3000/products");
+    const { data, error } = useFetch(
+      "https://my-json-server.typicode.com/kyung89/nuxt-shopping-api/products"
+    );
     console.log(data);
     this.products = data.Map((item) => ({
       ...item,

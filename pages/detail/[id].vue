@@ -32,7 +32,9 @@ export default {
   mounted() {
     const route = useRoute();
     const id = route.params.id;
-    const { data, error } = useFetch(`http://localhost:3000/products/${id}`);
+    const { data, error } = useFetch(
+      `https://my-json-server.typicode.com/kyung89/nuxt-shopping-api/products/${id}`
+    );
     this.product = data;
   },
   methods: {
